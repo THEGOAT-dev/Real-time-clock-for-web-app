@@ -14,7 +14,14 @@
              var min = d.getMinutes();
              var sec = d.getSeconds();
 
-             document.body.innerHTML = "Today is: <br/>"+day+" "+date+"th "+month+" "+year+" "+hour+":"+min+":"+sec+" ";
+             var MV; 
+             if(hour>=12){
+                MV="PM";
+             }else{
+                 MV="AM";
+             }
+
+             document.body.innerHTML = "Today is: <br/>"+day+" "+date+"th "+month+" "+year+" "+hour+":"+min+":"+sec+" "+MV;
          }   
          setInterval(showTime,1000);
         
